@@ -1,0 +1,83 @@
+.prepay {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: scroll;
+  .prepay_content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    .prepay_content_input {
+      display: flex;
+      align-items: center;
+      border-radius: 15px;
+      padding: 10px;
+      background-color: rgba(50, 50, 50, 0.1);
+      .prepay_content_input_icon {
+        font-size: 30px;
+        margin-right: 10px;
+      }
+    }
+    .prepay_content_options {
+      flex: 1;
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 20px;
+      background-color: #EEF8F4;
+      .prepay_option {
+        .prepay_option_head {
+          display: flex;
+          align-items: center;
+          .prepay_option_head_title {
+            font-size: 14px;
+            font-weight: 600;
+          }
+          .prepay_option_head_describe {
+            font-size: 12px;
+            color: #AAAAAA;
+            margin-left: 10px;
+          }
+        }
+      }
+      .prepay_option_grades {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 0;
+        .prepay_grade {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: calc((100% - 15px) / 3);
+          height: 75px;
+          border-radius: 10px;
+          background-color: #FFFFFF;
+          color: #39532E;
+          margin: 5px 7.5 5px 0px;
+          &:nth-child(3n) {
+            margin-right: 0;
+          }
+          .prepay_grade_price {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+          }
+          .prepay_grade_realprice {
+            span:first-child {
+              font-size: 12px;
+            }
+            span:nth-child(2) {
+              font-size: 11px;
+              margin-left: 3px;
+              margin-right: 1px;
+            }
+            span:last-child {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
