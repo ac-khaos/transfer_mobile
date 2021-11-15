@@ -1,0 +1,36 @@
+.home {
+  padding: 20px 20px;
+  width: 100%;
+  .title {
+    padding: 2px 8px;
+    border-left: 2px solid var(--theme-color);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .modules {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    .module_col {
+      display: flex;
+      width: 33.333333333333333%;
+      justify-content: center;
+      .module {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        .module_logo {
+          color: var(--theme-color);
+          font-size: 30px;
+          margin-bottom: 5px;
+        }
+        .module_name {
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
