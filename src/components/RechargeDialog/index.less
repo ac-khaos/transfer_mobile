@@ -1,0 +1,73 @@
+.recharge_dialog {
+  .adm-dialog-wrap {
+    width: calc(100% - 30px) !important;
+  }
+  .adm-list {
+    font-size: 14px !important;
+  }
+  .adm-list-card {
+    margin: 0px 12px !important;
+  }
+  .adm-list-item {
+    padding-left: 0 !important;
+  }
+  .adm-list-item-content {
+    padding-right: 0 !important;
+  }
+  .recharge_dialog_body {
+    padding: 20px 0 !important;
+  }
+  .adm-button {
+    width: 60%;
+  }
+  .recharge_box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .recharge_cancel {
+      position: absolute;
+      right: 12px;
+      top: 1px;
+      font-size: 14px;
+      color: var(--theme-color);
+      user-select: none;
+    }
+    .recharge_title {
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .recharge_number {
+      margin-top: 15px;
+      font-size: 24px;
+      font-weight: 600;
+      font-family: 'weui';
+      text-align: center;
+      span:nth-child(2) {
+        margin: 0 8px;
+      }
+    }
+    .recharge_tip {
+      margin: 5px 0 10px 0;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: 'weui';
+      color: #DD462E;
+      text-align: center;
+    }
+    .recharge_describe {
+      margin: 0 12px;
+      padding: 10px;
+      background-color: #F6F6F6;
+      color: #535353;
+      font-size: 12px;
+      .recharge_describe_row {
+        line-height: 1.5;
+      }
+    }
+    .recharge_submit {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+}
