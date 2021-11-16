@@ -1,6 +1,9 @@
+import { SectionType } from "../../enums";
+
 export interface RechargeSection {
   key: string;
   title: string;
+  type: SectionType;
   describe?: string;
   grades?: Array<Grade>;
 }
@@ -18,6 +21,7 @@ export default {
       key: "cmcc_fast",
       title: "话费慢充",
       describe: "1-72小时到账 请耐心等待",
+      type: SectionType.slow,
       grades: [
         {
           key: "100",
@@ -35,6 +39,7 @@ export default {
       key: "cmcc_slow",
       title: "话费快充",
       describe: "1-30分钟到账",
+      type: SectionType.fast,
       grades: [
         {
           key: "100",
@@ -65,6 +70,7 @@ export default {
       key: "unicom_fast",
       title: "话费慢充",
       describe: "1-72小时到账 请耐心等待",
+      type: SectionType.slow,
       grades: [
         {
           key: "100",
@@ -82,6 +88,7 @@ export default {
       key: "unicom_slow",
       title: "话费快充",
       describe: "1-30分钟到账",
+      type: SectionType.fast,
       grades: [
         {
           key: "100",
@@ -112,6 +119,7 @@ export default {
       key: "telecom_fast",
       title: "话费慢充",
       describe: "1-72小时到账 请耐心等待",
+      type: SectionType.slow,
       grades: [
         {
           key: "30",
@@ -149,6 +157,7 @@ export default {
       key: "telecom_slow",
       title: "话费快充",
       describe: "1-30分钟到账",
+      type: SectionType.fast,
       grades: [
         {
           key: "100",
