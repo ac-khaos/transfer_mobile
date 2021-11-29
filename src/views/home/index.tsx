@@ -12,6 +12,7 @@ import {
 } from "antd-mobile-icons";
 
 import Layout from "../../components/Layout";
+import { RouterPaths } from "../../routers";
 import "./index.less";
 
 export default () => {
@@ -27,7 +28,7 @@ export default () => {
             key: "recharge",
             icon: <ReceivePaymentOutline />,
             name: "话费充值",
-            link: "/prepaid",
+            link: RouterPaths.prepay,
           },
         ],
       },
@@ -94,10 +95,7 @@ export default () => {
             <div className="modules">
               {service.modules.map((module) => (
                 <div key={module.key} className="module_col">
-                  <div
-                    className="module"
-                    onClick={module.onClick || (() => onModuleClick(module))}
-                  >
+                  <div className="module" onClick={module.onClick || (() => onModuleClick(module))}>
                     <div className="module_logo">{module.icon}</div>
                     <div className="module_name">{module.name}</div>
                   </div>

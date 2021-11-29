@@ -6,7 +6,7 @@ const AntdDayjsWebpackPlugin = require("antd-dayjs-webpack-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
 // 打包分析工具
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
-  .BundleAnalyzerPlugin;
+      .BundleAnalyzerPlugin;
 // 显示打包进度
 const SimpleProgressWebpackPlugin = require("simple-progress-webpack-plugin");
 
@@ -15,6 +15,7 @@ const webpackConfig = {
   devtool: "eval-source-map",
   entry: path.resolve(__dirname, "./src/layout/index.tsx"),
   output: {
+    publicPath: "/",
     path: path.resolve(__dirname, "./dist"),
     filename: "[name][fullhash].bundle.js",
   },
@@ -97,7 +98,7 @@ const webpackConfig = {
     },
     open: false,
     historyApiFallback: true,
-    allowedHosts: ["recharge.test.cn"],
+    allowedHosts: ["www.hcsz088.com"],
     // proxy: {
     //   "/": {
     //     target: "http://106.14.137.117:8086",

@@ -9,6 +9,8 @@ import {
 import home from "./views/home";
 import prepay from "./views/prepay";
 
+export const ROUTERPREFIX = "/transfer-mobile";
+
 // 路由key枚举
 export enum RouterKeys {
   home = "home",
@@ -17,8 +19,8 @@ export enum RouterKeys {
 
 // 路由path枚举
 export enum RouterPaths {
-  home = "/",
-  prepay = "/prepaid",
+  home = `${ROUTERPREFIX}/`,
+  prepay = `${ROUTERPREFIX}/prepaid`,
 }
 
 // 路由项接口

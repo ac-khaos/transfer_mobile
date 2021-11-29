@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { Dialog } from "antd-mobile";
 
-import { layoutRouters } from "../routers";
-import {
-  isWxenv,
-  QueryParams,
-  queryString,
-  getUrlParam,
-} from "../libraries/common";
+import { layoutRouters, RouterPaths } from "../routers";
+import { isWxenv, QueryParams, queryString, getUrlParam } from "../libraries/common";
 import pkgConfig from "../../package.json";
 import xhrRequest from "../services/xhrRequest";
 
@@ -23,11 +18,9 @@ const LayoutRoot = () => {
   function wxLogin(): void {
     const wxcode = getUrlParam("code");
     if (wxcode) {
-      xhrRequest
-        .post("/h5/wx/user/login", { authSourceTypeCode: 0, code: wxcode })
-        .then((res) => {
-          console.log("login-----------", res);
-        });
+      xhrRequest.post("/h5/wx/user/login", { authSourceTypeCode: 0, code: wxcode }).then((res) => {
+        console.log("login-----------", res);
+      });
     } else {
       const wxLoginParams: QueryParams = {
         appid: pkgConfig.wxConfig?.appId,
@@ -48,13 +41,9 @@ const LayoutRoot = () => {
     <Router>
       <Switch>
         {layoutRouters.map((rt) => (
-          <Route
-            key={rt.key}
-            exact={rt.exact}
-            path={rt.path}
-            component={rt.component}
-          />
+          <Route key={rt.key} exact={rt.exact} path={rt.path} component={rt.component} />
         ))}
+        <Redirect to={RouterPaths.home} />
       </Switch>
     </Router>
   );
